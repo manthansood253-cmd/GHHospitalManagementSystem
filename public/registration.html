@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Patient Registration</title>
+
+      <link rel="stylesheet" href="css/style.css">
+
+    <style>
+
+        body{
+
+            font-family:Arial;
+
+            background:#f4f4f4;
+
+            padding:30px;
+        }
+
+        .form-container{
+
+            width:500px;
+
+            margin:auto;
+
+            background:white;
+
+            padding:30px;
+
+            border-radius:10px;
+
+            box-shadow:0 2px 10px rgba(0,0,0,0.2);
+        }
+
+        h1{
+
+            text-align:center;
+
+            color:#3498db;
+
+            margin-bottom:20px;
+        }
+
+        form{
+
+            display:flex;
+
+            flex-direction:column;
+        }
+
+        label{
+
+            display:block;
+
+            margin-top:15px;
+
+            margin-bottom:5px;
+
+            font-weight:bold;
+        }
+
+        input,
+        textarea,
+        select{
+
+            width:100%;
+
+            padding:10px;
+
+            border:1px solid #ccc;
+
+            border-radius:5px;
+
+            font-size:16px;
+        }
+
+        fieldset{
+
+            margin-bottom:20px;
+
+            padding:20px;
+
+            border:2px solid #3498db;
+
+            border-radius:10px;
+        }
+
+        legend{
+
+            color:#3498db;
+
+            font-weight:bold;
+
+            padding:0 10px;
+        }
+
+        .radio-group,
+        .checkbox-group{
+
+            display:flex;
+
+            flex-direction:column;
+
+            gap:10px;
+
+            margin-top:10px;
+        }
+
+        .radio-item,
+        .checkbox-item{
+
+            display:flex;
+
+            align-items:center;
+
+            gap:10px;
+        }
+
+        .radio-item input,
+        .checkbox-item input{
+
+            width:auto;
+        }
+
+        textarea{
+
+            resize:none;
+        }
+
+        button{
+
+            margin-top:15px;
+
+            padding:12px;
+
+            background:#3498db;
+
+            color:white;
+
+            border:none;
+
+            border-radius:5px;
+
+            cursor:pointer;
+
+            font-size:16px;
+        }
+
+        button:hover{
+
+            background:#2980b9;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="form-container">
+
+        <h1>🏥 Patient Registration</h1>
+
+        <form>
+
+            <!-- Personal Information -->
+
+            <fieldset>
+
+                <legend>Personal Information</legend>
+
+                <label>Full Name</label>
+
+                <input type="text"
+                       placeholder="Enter Full Name"
+                       required>
+
+                <label>Email Address</label>
+
+                <input type="email"
+                       placeholder="Enter Email"
+                       required>
+
+                <label>Password</label>
+
+                <input type="password"
+                       placeholder="Enter Password">
+
+                <label>Phone Number</label>
+
+                <input type="tel"
+                       placeholder="123-456-7890">
+
+                <label>Age</label>
+
+                <input type="number"
+                       min="1"
+                       max="100">
+
+                <label>Date of Birth</label>
+
+                <input type="date">
+
+            
+            </fieldset>
+
+            <!-- Gender -->
+
+            <fieldset>
+
+                <legend>Gender</legend>
+
+                <div class="radio-group">
+
+                    <div class="radio-item">
+
+                        <input type="radio"
+                               name="gender">
+
+                        <span>Male</span>
+
+                    </div>
+
+                    <div class="radio-item">
+
+                        <input type="radio"
+                               name="gender">
+
+                        <span>Female</span>
+
+                    </div>
+
+                    <div class="radio-item">
+
+                        <input type="radio"
+                               name="gender">
+
+                        <span>Other</span>
+
+                    </div>
+
+                </div>
+
+            </fieldset>
+
+            <!-- Departments -->
+
+            <fieldset>
+
+                <legend>Departments</legend>
+
+                <div class="checkbox-group">
+
+                    <div class="checkbox-item">
+
+                        <input type="checkbox">
+
+                        <span>Cardiology</span>
+
+                    </div>
+
+                    <div class="checkbox-item">
+
+                        <input type="checkbox">
+
+                        <span>Neurology</span>
+
+                    </div>
+
+                    <div class="checkbox-item">
+
+                        <input type="checkbox">
+
+                        <span>Orthopedic</span>
+
+                    </div>
+
+                    <div class="checkbox-item">
+
+                        <input type="checkbox">
+
+                        <span>Dermatology</span>
+
+                    </div>
+
+                </div>
+
+            </fieldset>
+
+            <!-- Doctor Selection -->
+
+            <fieldset>
+
+                <legend>Doctor Selection</legend>
+
+                <label>Select Doctor</label>
+
+                <select>
+
+                    <option>Dr. John</option>
+                    <option>Dr. Smith</option>
+                    <option>Dr. Emily</option>
+
+                </select>
+
+            </fieldset>
+
+            <!-- Extra Inputs -->
+
+            <fieldset>
+
+                <legend>Additional Information</legend>
+
+                <label>Upload Medical Report</label>
+
+                <input type="file">
+
+                <label>Select Favorite Color</label>
+
+                <input type="color">
+
+                <label>Health Level</label>
+
+                <input type="range"
+                       min="0"
+                       max="10">
+
+                <label>Comments</label>
+
+                <textarea rows="5"
+                          placeholder="Enter comments"></textarea>
+
+            </fieldset>
+
+            <!-- Buttons -->
+
+            <button type="submit">
+                Register
+            </button>
+
+            <button type="reset">
+                Reset
+            </button>
+
+        </form>
+
+    </div>
+
+</body>
+
+</html>
