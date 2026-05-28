@@ -1,0 +1,12 @@
+// Even or Odd Checker
+
+let number = 17;
+
+if (number % 2 === 0) {
+
+    console.log(number + " is Even");
+
+} else {
+
+    console.log(number + " is Odd");
+}
